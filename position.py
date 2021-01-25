@@ -1,7 +1,7 @@
 class Position:
-    location = 0
-    def position(self, location):
-        if location > 44:
-            location -= 44
-        return location
-    
+    def current(self):
+        current_position = 0
+        if current_position > 44:
+            current_position -= 44
+            return current_position
+        
