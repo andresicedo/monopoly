@@ -1,7 +1,8 @@
+from turn import Turn
 class Position:
-    def current(self):
-        current_position = 0
+    def current(self, turn: Turn):
+        current_position = turn.roll_history[-1] + turn.roll_history[-2]
         if current_position > 44:
             current_position -= 44
-            return current_position
+        return current_position
         

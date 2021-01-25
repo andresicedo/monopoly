@@ -13,3 +13,4 @@ class Lucky_locations:
             "35": "SPEEDING3",
             "37": "FORECLOSURE2",
         }
+        

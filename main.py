@@ -1,6 +1,6 @@
 from game import Game
 from players import Players
-from dice import Dice
+
 def main():
     players = Players()
     game = Game()
