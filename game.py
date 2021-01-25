@@ -1,3 +1,4 @@
+from purchase import Purchase
 from dice import Dice
 from players import Players
 from turn import Turn
@@ -6,13 +7,15 @@ class Game:
     def menu(self, turn: Turn, players: Players):
         dice = Dice()
         assets = Assets()
+        purchase = Purchase()
         print("What would like to do?\n")
         print("1. ENTER GAME\n2. MY ASSETS\n3. LEADERBOARD\n4. QUIT\n")
         user_input = input("ENTER HERE: ")
         if user_input == "1":
-            dice.player_roll(players)
-            turn.player_turn()
-            dice.bot_roll(players)
+            dice.player_roll(players, turn)
+            turn.player_turn(players)
+            purchase.purchase(players, turn)
+            dice.bot_roll(players, turn)
         if user_input =="2":
             print(f"Current Balance: {assets.user_account_balance}")
             print(f"Current Properties: {assets.user_properties}")

@@ -6,9 +6,9 @@ from turn import Turn
 from position import Position
 
 class Dice:
-    def player_roll(self, players: Players):
+    def player_roll(self, players: Players, turn):
         board = Board()
-        turn = Turn()
+        # turn = Turn()
         position = Position()
         
         dice1 = random.randint(1,6)
@@ -20,9 +20,9 @@ class Dice:
         print(f"{players.players[0]} moved {total} spaces and landed on {board.monopoly[str(position.current(turn))]}\n")
         
 
-    def bot_roll(self, players: Players):
+    def bot_roll(self, players: Players, bot_turn):
         board = Board()
-        bot_turn = Turn()
+        # bot_turn = Turn()
         bot_position = Bot_position()
 
         bot_dice1 = random.randint(1,6)
