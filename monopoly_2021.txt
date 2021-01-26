@@ -1,0 +1,31 @@
+user will play against a monopoly bot
+    bot will have a 50% probability of purchasing property
+
+there will be 44 spots on the board.
+
+the first player to run out of money loses
+
+the board will travel through the US accordingly:
+east coast, the south, midwest, west coast
+
+the bank will hold all available properties for purchase    
+    when a property is purchase, the bank will remove the property from dictionary
+    
+    property will be appended to list of user and bot properties accordingly
+    
+    there will be 4 railroads available for purchase
+    
+    there will be 4 companies for purchase
+
+two dice(1-6) will roll random instances and total will be player roll
+user will have first roll
+
+if player lands on unpurhcased land, user will have option to buy
+
+if a player lands on purchased property, user pays $500 to player owner
+
+every play start with $5000
+there will be locations on the board where players get lucky and not so lucky
+    luck locations will award the player with $$$
+    not so lucky locations will take $$$ from player
+    

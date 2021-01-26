@@ -1,8 +1,4 @@
-from life_locations import Life_locations
-from luck_locations import Lucky_locations
 class Board:
-    life_locations = Life_locations()
-    luck_locations = Lucky_locations()
     monopoly = {
         "0": "GO",
         "1": 'EAST_COAST1',
