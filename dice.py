@@ -28,9 +28,8 @@ class Dice:
         bot_dice1 = random.randint(1,6)
         bot_dice2 = random.randint(1,6)
         bot_total = bot_dice1 + bot_dice2 
-        
         bot_turn.bot_roll_history.append(bot_total)
-
+        bot_position.bot_current(bot_turn)
         print(f"Roll: {bot_total}, Dice 1: {bot_dice1}, Dice 2: {bot_dice2}\n")
         print(f"{players.players[1]} moved {bot_total} spaces and landed on {board.monopoly[str(bot_position.bot_current(bot_turn))]}\n")
     
