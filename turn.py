@@ -35,37 +35,48 @@ class Turn:
             print("It's your lucky day, you landed on a 'lucky location'.\n")
             if board.monopoly[str(position.current(self))] == "GO":
                 print("You made a full trip around MONOPOLY 2021!\n$200 was added to your bank account!\n")
-                assets.bot_account_balance += 200
+                assets.user_account_balance[0] += 200
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             if board.monopoly[str(position.current(self))] == "BEGINNERS_LUCK":
                 print("It pays to be a beginner!\n$500 was added to your bank account!\n")
-                assets.bot_account_balance += 500
+                assets.user_account_balance[0] += 500
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             if board.monopoly[str(position.current(self))] == "SPEEDING1":
                 print("Too fast!\nThe SPEEDING TICKET cost you $200\n")
-                assets.bot_account_balance -= 200
+                assets.user_account_balance[0] -= 200
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             if board.monopoly[str(position.current(self))] == "LOTTERY1":
                 print("You just won the LOTTERY!\n$1000 was added to your bank account\n")
-                assets.bot_account_balance += 1000
+                assets.user_account_balance[0] += 1000
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             if board.monopoly[str(position.current(self))] == "LOTTERY2":
                 print("You just won the LOTTERY!\n$1000 was added to your bank account\n")
-                assets.bot_account_balance += 1000
+                assets.user_account_balance[0] += 1000
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             if board.monopoly[str(position.current(self))] == "SPEEDING2":
                 print("Too fast!\nThe SPEEDING TICKET cost you $300\n")
-                assets.bot_account_balance -= 300
+                assets.user_account_balance[0] -= 300
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             if board.monopoly[str(position.current(self))] == "FOR_SALE1":
                 print("AUCTION!!!!\nA credit of $300 has been added to your account to use towards your next purchase!\n")
-                assets.bot_account_balance += 300
+                assets.user_account_balance[0] += 300
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             if board.monopoly[str(position.current(self))] == "FOR_SALE2":
                 print("AUCTION!!!!\nA credit of $300 has been added to your account to use towards your next purchase!\n")
-                assets.bot_account_balance += 300
+                assets.user_account_balance[0] += 300
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             if board.monopoly[str(position.current(self))] == "FORECLOSURE1":
                 print("FORECLOSURE!!!!\nA credit of $100 has been added to your account to use towards your next purchase!\n")
-                assets.bot_account_balance += 100
+                assets.user_account_balance[0] += 100
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             if board.monopoly[str(position.current(self))] == "SPEEDING3":
                 print("Too fast!\nThe SPEEDING TICKET cost you $300\n")
-                assets.bot_account_balance -= 300
+                assets.user_account_balance[0] -= 300
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             if board.monopoly[str(position.current(self))] == "FORECLOSURE2":
                 print("FORECLOSURE!!!!\nA credit of $100 has been added to your account to use towards your next purchase!\n")
-                assets.bot_account_balance += 100
+                assets.user_account_balance[0] += 100
+                print(f"Your updated balance is ${assets.user_account_balance[0]}\n")
             
             
     # bot_roll_history = [0]
@@ -85,39 +96,39 @@ class Turn:
         #board.monopoly[str(self.bot_current())]
 
         if board.monopoly[str(bot_position.bot_current(self))] in life_locations.life:
-            print(f"{players.players[1]} landed on a 'LIFE HAPPPENS' location.\n\nDue to a(n) {board.monopoly[str(bot_position.bot_current(self))]},\n {players.players[1]}'s turn is over.")
+            print(f"{players.players[1]} landed on a 'LIFE HAPPPENS' location.\n\nDue to a(n) {board.monopoly[str(bot_position.bot_current(self))]},\n{players.players[1]}'s turn is over.")
         if board.monopoly[str(bot_position.bot_current(self))] in luck_locations.luck:
             if board.monopoly[str(bot_position.bot_current(self))] == "GO":
                 print(f"{players.players[1]} + $200\n")
-                assets.bot_account_balance += 200
+                assets.bot_account_balance[0] += 200
             if board.monopoly[str(bot_position.bot_current(self))] == "BEGINNERS_LUCK":
                 print(f"{players.players[1]} + $500\n")
-                assets.bot_account_balance += 500
+                assets.bot_account_balance[0] += 500
             if board.monopoly[str(bot_position.bot_current(self))] == "SPEEDING1":
                 print(f"{players.players[1]} - $200\n")
-                assets.bot_account_balance -= 200
+                assets.bot_account_balance[0] -= 200
             if board.monopoly[str(bot_position.bot_current(self))] == "LOTTERY1":
                 print(f"{players.players[1]} + $1000\n")
-                assets.bot_account_balance += 1000
+                assets.bot_account_balance[0] += 1000
             if board.monopoly[str(bot_position.bot_current(self))] == "LOTTERY2":
                 print(f"{players.players[1]} + $1000\n")
-                assets.bot_account_balance += 1000
+                assets.bot_account_balance[0] += 1000
             if board.monopoly[str(bot_position.bot_current(self))] == "SPEEDING2":
                 print(f"{players.players[1]} - $300\n")
-                assets.bot_account_balance -= 300
+                assets.bot_account_balance[0] -= 300
             if board.monopoly[str(bot_position.bot_current(self))] == "FOR_SALE1":
                 print(f"{players.players[1]} + $300\n")
-                assets.bot_account_balance += 300
+                assets.bot_account_balance[0] += 300
             if board.monopoly[str(bot_position.bot_current(self))] == "FOR_SALE2":
                 print(f"{players.players[1]} + $300\n")
-                assets.bot_account_balance += 300
+                assets.bot_account_balance[0] += 300
             if board.monopoly[str(bot_position.bot_current(self))] == "FORECLOSURE1":
                 print(f"{players.players[1]} + $100\n")
-                assets.bot_account_balance += 100
+                assets.bot_account_balance[0] += 100
             if board.monopoly[str(bot_position.bot_current(self))] == "SPEEDING3":
                 print(f"{players.players[1]} - $300\n")
-                assets.bot_account_balance -= 300
+                assets.bot_account_balance[0] -= 300
             if board.monopoly[str(bot_position.bot_current(self))] == "FORECLOSURE2":
                 print(f"{players.players[1]} + $100\n")
-                assets.bot_account_balance += 100
+                assets.bot_account_balance[0] += 100
         #probability

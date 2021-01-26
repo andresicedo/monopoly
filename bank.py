@@ -6,7 +6,7 @@ class Bank:
         'EAST_COAST4': 1500,
         'EAST_COAST5': 400,
         'RAIL_ROAD1': 1200,
-        'fishing_corp': 1500,
+        'FISHING_CORP': 1500,
         'THE_SOUTH1': 400,
         'THE_SOUTH2': 650,
         'THE_SOUTH3': 900,

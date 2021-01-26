@@ -14,8 +14,8 @@ class Rent:
         assets = Assets()
 
         if board.monopoly[str(position.current(turn))] in assets.bot_properties:
-            assets.bot_account_balance += 500
-            assets.user_account_balance -= 500
+            assets.bot_account_balance[0] += 500
+            assets.user_account_balance[0] -= 500
             print("You landed on a purchased property!\n")
             print(f"Rent paid to {players.players[1]}: $500\n")
 
@@ -28,7 +28,8 @@ class Rent:
         bot_position = Bot_position()
 
         if board.monopoly[str(bot_position.bot_current(bot_turn))] in assets.user_properties:
-            assets.bot_account_balance -= 500
-            print(assets.bot_account_balance)
-            assets.user_account_balance += 500
+            assets.bot_account_balance[0] -= 500
+            assets.user_account_balance[0] += 500
             print(f"Rent paid to {players.players[0]}: $500\n")
+            print(f"Updated Balance for {players.players[1]}: ${assets.bot_account_balance[0]}")
+            print(f"Updated Balance for {players.players[0]}: ${assets.user_account_balance[0]}")
